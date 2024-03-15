@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꾸먕 자유게시판 페이지</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/freeboard.css">
+    <script src="https://kit.fontawesome.com/63ee985f7b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="container">
+        <div class="freeboard">
+            <h3 class="title">자유게시판</h3>
+            <div class="search_box">
+                <form action="search_result.html" method="get" autocomplete="off">
+                    <select name="category" id="category">
+                        <option value="title">제목</option>
+                        <option value="author">작성자</option>
+                    </select>
+                    <input type="text" name="search" id="search" placeholder="검색어를 입력하세요.">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <table class="freeboard_table">
+                <tr>
+                    <th class="th_num">번호</th>
+                    <th class="th_title">제목</th>
+                    <th class="th_author">작성자</th>
+                    <th class="th_date">작성일</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>굿즈가 너무 귀여워요</td>
+                    <td>번뱀이</td>
+                    <td>11월 20일</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>제목입니다</td>
+                    <td>김첨지</td>
+                    <td>11월 20일</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>제목입니다</td>
+                    <td>로스트끼룩</td>
+                    <td>2월 10일</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>상품 문의</td>
+                    <td>까악까악</td>
+                    <td>3월 21일</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>배송 문의</td>
+                    <td>쥐돌이</td>
+                    <td>5월 25일</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>상품 문의</td>
+                    <td>쿠크루삥뽕</td>
+                    <td>5월 25일</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>다른 종류의 굿즈도 만들어주세요</td>
+                    <td>호랑나비</td>
+                    <td>3월 3일</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>카카오랑 콜라보 해주세요</td>
+                    <td>김칫국</td>
+                    <td>4월 10일</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>현기증 나요</td>
+                    <td>앵무새</td>
+                    <td>3월 17일</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>상품 문의</td>
+                    <td>쥐돌이</td>
+                    <td>10월 20일</td>
+                </tr>
+            </table>
+            <div class="write">
+                <a href="insert_view.html">글쓰기</a>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        // header 위치에 header.html을 불러와서 삽입
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+
+        // footer 위치에 footer.html을 불러와서 삽입
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
