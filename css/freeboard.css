@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-6Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*css reset*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {line-height: 1; font-family: 'S-CoreDream-4Regular';
+    background-color: #f1f9ff;}
+ul, ol, li {list-style: none;}
+a {text-decoration: none; color: black;}
+img, video {vertical-align: top;}
+table {border-collapse: collapse;}
+input {outline:0; font-family: 'S-CoreDream-4Regular';}
+h1,h2,h3,h4,h5,h6 {font-family: 'S-CoreDream-6Bold';}
+button {border: none; background-color:inherit;
+    cursor: pointer; font-family: 'S-CoreDream-6Bold';}
+
+#container {display: flex; justify-content: center; align-items: center;
+    width: 100%;}
+
+/*표 꾸미기*/
+.freeboard {width:1200px; height:auto; padding: 50px 0;}
+.freeboard .title {text-align:center; font-size:40px; font-weight: bold; margin:50px 0;
+    color:#3a3a3a;}
+.freeboard table {width:1200px; border-top:3px solid #fff; color:#3a3a3a;
+    margin-bottom:30px;}
+.freeboard table th {background-color:#4e8cff; border-bottom:1px solid #fff;
+    color:#fff;}
+.freeboard table tr {line-height:40px; border-bottom:1px solid #eee;}
+.freeboard table .th_num {width:150px;}
+.freeboard table tr td {text-align: center; background-color: #fff;}
+.freeboard table tr td a {color:#3a3a3a;}
+.freeboard table tr td a:hover {color:#4e8cff;}
+.freeboard table tr td:nth-child(2) {text-align:left;}
+.freeboard table .th_auther {width:150px;}
+.freeboard table .th_day {width:150px;}
+.write {text-align: right; margin-bottom:100px;}
+.write a {width: 120px; line-height: 50px; background-color:#4e8cff;
+        text-align: center; border-radius: 10px; display: inline-block;
+        color: #fff; transition: all 0.5s;}
+.write a:hover {color:#4e8cff; background-color:#fff;
+    box-shadow: 0px 3px 6px 1px #2b77b5;} 
+/*검색 구간*/
+.search_box {background-color:#4e8cff; padding:20px 0; display: flex; justify-content: center;
+            align-items: center;}
+.search_box form {height: 40px; display: flex; justify-content: center; align-items: center;}
+.search_box #category {width: 100px; height:100%; text-indent: 10px;
+        border-radius: 5px; border: none; margin-right:10px; font-family: 'S-CoreDream-4Regular';
+        color:#3a3a3a; font-size: 16px;}
+.search_box #search {height:104%; display:inline-block; width:400px;
+        text-indent: 10px; border-radius: 5px; border:none; margin-right:20px;
+        font-size: 16px;}
+.search_box form i {color:#fff; font-size: 30px;}

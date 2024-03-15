@@ -1,0 +1,52 @@
+/*푸터 영역 작업*/
+#footer {background-image: url(../img/visual_banner01.png); background-repeat: no-repeat; background-size: cover;
+    padding:45px 0; background-attachment: fixed;}
+#footer .center {width: 60%; margin:0 auto; display: flex; padding-left:10px;}
+#footer .center .list {width:25%;}
+#footer .center .f_logo {width:180px; margin-bottom:45px;}
+#footer .center .f_logo img {width: 100%;}
+#footer .center .sns_wrap {display: flex; justify-content: space-between; width:60%;
+                      margin-left:10px;}
+#footer .center .sns_wrap li {margin-right:6px;}
+#footer .center .sns_wrap li a i {font-size:24px; color:#fff; transition: all 0.5s;}
+#footer .center .list ul li {line-height:24px;}
+#footer .center .list ul li a {color:#fff; font-family: 'S-CoreDream-3Light'; font-size:14px;
+                          transition: all 0.5s;}
+#footer .center .list .bookmark_btn {display: inline-block; width: 120px; line-height:40px;
+    background: linear-gradient(90deg, rgba(61,206,215,1) 0%, rgb(61, 50, 131) 100%);
+    border-radius: 20px; text-align: center; color:#fff; font-size:14px; margin-bottom:30px;
+    transition: all 0.5s;}
+#footer .center .list .copyright {color:#fff; font-family: 'S-CoreDream-3Light';
+                            font-size:13px; line-height: 24px;}
+/*푸터 호버 작업*/
+#footer .center .list .bookmark_btn:hover {box-shadow: 0 0 5px 2px #2d314d inset;}
+#footer .center .list ul li:hover a {color:#113b8a;}
+#footer .center .list .sns_wrap li:hover a i {color:#113b8a;}
+
+@media screen and (max-width:1200px)
+{
+    /*푸터 영역 작업*/
+    #footer .center {width:100%;}
+    #footer .center .sns_wrap li {margin-right:17px;}
+    #footer .center .sns_wrap li a i {font-size:20px;}
+    #footer .center .list .copyright {line-height: 20px;}
+}
+@media screen and (max-width:840px)
+{
+    /*푸터 영역 작업*/
+    #footer .center {flex-wrap: wrap;}
+    #footer .center .list {width: 45%; margin-left:10px; margin-right:10px;}
+    #footer .center .list:nth-child(n-3) {margin-bottom:30px;}
+    #footer .center .list:nth-child(n+3) {margin-bottom:0;}
+    #footer .center .f_logo {width: 140px;}
+    #footer .center .sns_wrap li {margin-right:10px;}
+    #footer .center .sns_wrap li a i {font-size:20px;}
+    #footer .center .list .copyright {line-height: 20px;}
+}
+@media screen and (max-width:600px)
+{
+    #footer .center {flex-direction: column;}
+    #footer .center .list {margin-bottom:45px; width:60%;}
+    #footer .center .list:nth-child(n-3) {margin-bottom:45px;}
+    #footer .center .list ul li {line-height: 30px;}
+}

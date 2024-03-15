@@ -1,0 +1,69 @@
+/*헤더 영역 작업*/
+#header {background-color: #fff; position: relative; display: flex; height: 75px;
+    justify-content:space-between; align-items: center; opacity: 1; transition: all 0.5s;
+    position: relative; width: 100%; z-index: 999;}
+#header.on {position: fixed; top:0; left:0;}
+#header .center {width:60%; margin:0 auto; display: flex; justify-content:space-between;
+            align-items: center; height: 100%;}
+#header .m_menu_btn {display: none;}
+#header .logo {width: 130px;}
+#header .logo img {width: 100%;}
+#header .gnb {display: flex; justify-content: space-between; align-items: center;
+        text-align: center; width: 60%;}
+#header .gnb > li {line-height:75px; font-size:14px; position: relative; text-align: center; width: 100%;}
+#header .gnb > li:after {content:""; display: inline-block; width:0%; height:2px; position: absolute; top:55px; left:50%;
+                  transform:translateX(-50%); background: linear-gradient(90deg, rgba(61,206,215,1) 0%, rgb(61, 50, 131) 100%);
+                  transition: all 0.5s;}
+#header .gnb li a {color:#131313; transition: all 0.5s;}
+#header .gnb .depth2 {position: absolute; top:70px; text-align: center; width: 100%; background-color:rgb(44, 42, 54);
+           z-index: 15; display:none; line-height:56px; transition: all 0.5s;
+           left:50%; transform: translate(-50%,5px);} 
+#header .depth2 li a {color:#fff;}
+#header .gnb_bg {width:100%; background-color:rgb(44, 42, 54); height:170px; display:none;
+            position: absolute; top:74px; left:50%; transform: translateX(-50%); transition: all 0.5s;
+            z-index: 12; border-top:1px solid #fff;}
+#header .login_btn {display: inline-block; width: 120px; line-height:40px;
+               background: linear-gradient(90deg, rgba(61,206,215,1) 0%, rgb(61, 50, 131) 100%);
+               border-radius: 20px; text-align: center; color:#fff; font-size:14px; transition: all 0.5s;}
+/*헤더 호버 작업*/
+#header:hover {background-color:rgb(44, 42, 54);}
+#header .gnb > li:hover:after {width: 70%;}
+#header:hover .gnb > li a {color:#fff;}
+#header .login_btn:hover {box-shadow: 0 0 5px 2px #2d314d inset;}
+#header > .depth2 li:hover a {color:#4e8cff;}
+/*모바일 메뉴 작업*/
+.m_menu {position: fixed; right:-300px; top:0; height:100%; width:300px;
+background-color: #0d365d; z-index:999; transition: all 0.5s;}
+.m_close {padding:20px; display: inline-block;}
+.m_close > i {font-size:24px; color:#fff;}
+.m_menu_list {height: auto; position: relative; z-index: 999;}
+.m_menu_list > li {line-height: 60px; height:60px; text-indent: 20px; border-bottom:1px solid #bebebe;
+        background-image: url(../img/arrow.png); background-repeat: no-repeat;
+        background-position:88% 20px; background-size: 20px; transition: all 0.5s;
+        overflow: hidden; position: relative; z-index: 999;}
+.m_menu_list > li > a {color:#fff; display: block;}
+.m_menu_list > li .m_depth2 {width: 100%; position: relative; z-index: 999;}
+.m_menu_list > li .m_depth2 li {background-color: #fff; }
+.m_menu_list > li.on {background-image: url(../img/arrow_flip.png); background-color: #4e8cff;}
+.m_menu_list > li .m_depth2 li a {color:#626262; display: block;}
+@media screen and (max-width:1200px)
+{
+    /*헤더 영역 작업*/
+    #header {padding:0 10px;}
+    #header .center {width:100%;}
+    #header .gnb {margin-left:0;}
+}
+@media screen and (max-width:840px)
+{
+    /*헤더 영역 작업*/
+    #header {padding:20px 10px; position: fixed; left:0; top:0; width: 100%;
+            z-index: 999;}
+    #header .gnb {display: none;}
+}
+@media screen and (max-width:768px)
+{
+    #header .center .m_menu_btn {display: block; position: absolute; top:50%; right:20px; transform:translateY(-50%);}
+    #header .center .m_menu_btn a i {color:#1e6dbf; font-size:24px;}
+    #header .login_btn {display: none;}
+    #header:hover .center .m_menu a i {color:#fff;}
+}
